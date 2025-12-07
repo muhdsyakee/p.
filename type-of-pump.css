@@ -1,0 +1,313 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+}
+
+.app-container {
+    min-height: 100vh;
+    position: relative;
+    background: linear-gradient(135deg, 
+        rgba(255, 235, 205, 0.3) 0%, 
+        rgba(255, 255, 255, 0.8) 30%, 
+        rgba(255, 255, 255, 0.9) 50%, 
+        rgba(255, 255, 255, 0.8) 70%, 
+        rgba(173, 216, 230, 0.3) 100%);
+    background-attachment: fixed;
+}
+
+/* Watercolor texture effect */
+.app-container::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 80% 20%, rgba(255, 200, 150, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 20% 80%, rgba(173, 216, 230, 0.15) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Top Header */
+.top-header {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 15px;
+    padding-top: 40px;
+}
+
+/* Gear Icons (Top Left) */
+.gear-icons {
+    position: relative;
+    width: 60px;
+    height: 40px;
+}
+
+.gear-icon {
+    position: absolute;
+    color: #555;
+    font-size: 18px;
+    animation: rotate 10s linear infinite;
+}
+
+.gear-1 {
+    top: 0;
+    left: 0;
+    font-size: 20px;
+}
+
+.gear-2 {
+    top: 8px;
+    left: 15px;
+    font-size: 16px;
+    animation-duration: 8s;
+    animation-direction: reverse;
+}
+
+.gear-3 {
+    top: 15px;
+    left: 30px;
+    font-size: 14px;
+    animation-duration: 12s;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Header Banner (Center) */
+.header-banner {
+    background-color: #1a2b4c;
+    border-radius: 30px;
+    padding: 12px 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    flex: 1;
+    max-width: 250px;
+    margin: 0 auto;
+}
+
+.header-banner h1 {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Header Icons (Top Right) */
+.header-icons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.icon-link {
+    color: #000;
+    font-size: 20px;
+    text-decoration: none;
+    transition: transform 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+}
+
+.icon-link:hover {
+    transform: scale(1.1);
+}
+
+.icon-link:active {
+    transform: scale(0.95);
+}
+
+/* Main Content */
+.main-content {
+    position: relative;
+    z-index: 1;
+    padding: 30px 20px;
+    padding-bottom: 40px;
+}
+
+.pump-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Pump Card */
+.pump-card {
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.pump-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.pump-card:active {
+    transform: translateY(-2px);
+}
+
+/* Card Borders */
+.lobe-pump {
+    border: 3px solid #90ee90;
+}
+
+.screw-pump {
+    border: 3px solid #00ff00;
+}
+
+.centrifugal-pump {
+    border: 3px solid #90ee90;
+}
+
+.gear-pump {
+    border: 3px solid #87ceeb;
+}
+
+/* Card Image Area */
+.card-image {
+    background-color: white;
+    padding: 20px;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.pump-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    max-height: 180px;
+    display: block;
+}
+
+/* Card Banner */
+.card-banner {
+    padding: 12px 20px;
+    text-align: center;
+    position: relative;
+    clip-path: polygon(10% 0%, 90% 0%, 100% 50%, 90% 100%, 10% 100%, 0% 50%);
+}
+
+.card-banner span {
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.purple-banner {
+    background-color: #9c27b0;
+}
+
+.pink-banner {
+    background-color: #e91e63;
+}
+
+.red-banner {
+    background-color: #f44336;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .header-banner {
+        max-width: 200px;
+        padding: 10px 20px;
+    }
+
+    .header-banner h1 {
+        font-size: 14px;
+    }
+
+    .gear-icon {
+        font-size: 14px;
+    }
+
+    .gear-1 {
+        font-size: 16px;
+    }
+
+    .gear-2 {
+        font-size: 12px;
+    }
+
+    .gear-3 {
+        font-size: 10px;
+    }
+
+    .icon-link {
+        font-size: 18px;
+        width: 30px;
+        height: 30px;
+    }
+
+    .pump-cards-grid {
+        gap: 15px;
+    }
+
+    .card-image {
+        min-height: 150px;
+        padding: 15px;
+    }
+
+    .pump-image {
+        max-height: 130px;
+    }
+
+    .card-banner span {
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .pump-cards-grid {
+        max-width: 500px;
+    }
+}
+
+@media (min-width: 769px) {
+    .app-container {
+        max-width: 800px;
+        margin: 0 auto;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .pump-cards-grid {
+        max-width: 700px;
+    }
+}
+
+
