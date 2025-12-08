@@ -16,8 +16,8 @@ body {
     position: relative;
     background-color: #fafafa;
     background-image: 
-        radial-gradient(circle at 90% 10%, rgba(255, 180, 200, 0.3) 0%, transparent 50%),
-        radial-gradient(circle at 10% 90%, rgba(200, 180, 255, 0.3) 0%, transparent 50%);
+        radial-gradient(circle at 15% 85%, rgba(255, 200, 200, 0.4) 0%, transparent 50%),
+        radial-gradient(circle at 85% 15%, rgba(255, 220, 180, 0.4) 0%, transparent 50%);
     background-attachment: fixed;
 }
 
@@ -30,8 +30,8 @@ body {
     right: 0;
     bottom: 0;
     background: 
-        radial-gradient(circle at 85% 15%, rgba(255, 200, 220, 0.25) 0%, transparent 60%),
-        radial-gradient(circle at 15% 85%, rgba(200, 200, 255, 0.25) 0%, transparent 60%);
+        radial-gradient(circle at 20% 80%, rgba(255, 180, 180, 0.3) 0%, transparent 60%),
+        radial-gradient(circle at 80% 20%, rgba(255, 200, 150, 0.3) 0%, transparent 60%);
     pointer-events: none;
     z-index: 0;
 }
@@ -104,6 +104,7 @@ body {
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
+    line-height: 1.3;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -138,70 +139,113 @@ body {
 .main-content {
     position: relative;
     z-index: 1;
-    padding: 40px 20px;
+    padding: 30px 20px;
     padding-bottom: 60px;
+}
+
+.content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+    align-items: start;
+}
+
+/* Image Section (Left) */
+.image-section {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: calc(100vh - 120px);
 }
 
-.action-buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+.image-container {
     width: 100%;
     max-width: 400px;
+    background-color: white;
+    border: 2px solid #000;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Action Button */
-.action-btn {
+.pump-image {
     width: 100%;
-    padding: 20px 30px;
-    border: none;
-    border-radius: 15px;
-    font-size: 18px;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: #333;
-    cursor: pointer;
-    transition: transform 0.2s, box-shadow 0.2s;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-decoration: none;
+    height: auto;
     display: block;
-    text-align: center;
+    object-fit: contain;
 }
 
-.action-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+/* Advantages Section (Right) */
+.advantages-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.action-btn:active {
-    transform: translateY(-1px);
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+.advantages-box {
+    width: 100%;
+    max-width: 450px;
+    background-color: #f44336;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Button Colors */
-.advantages-btn {
-    background-color: #4caf50;
+.advantages-list {
+    list-style: none;
+    padding: 0;
 }
 
-.disadvantages-btn {
-    background-color: #8bc34a;
+.advantages-list li {
+    color: white;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    padding-left: 25px;
+    position: relative;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.exploded-view-btn {
-    background-color: #cddc39;
+.advantages-list li:last-child {
+    margin-bottom: 0;
 }
 
-.list-component-btn {
-    background-color: #00bcd4;
+.advantages-list li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #000;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1;
 }
 
 /* Responsive Design */
+@media (max-width: 768px) {
+    .content-wrapper {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .header-title h1 {
+        font-size: 16px;
+    }
+
+    .image-container {
+        max-width: 100%;
+    }
+
+    .advantages-box {
+        max-width: 100%;
+        padding: 25px;
+    }
+
+    .advantages-list li {
+        font-size: 15px;
+    }
+}
+
 @media (max-width: 480px) {
     .header-title h1 {
         font-size: 14px;
@@ -229,31 +273,33 @@ body {
         height: 30px;
     }
 
-    .action-buttons {
-        gap: 15px;
+    .main-content {
+        padding: 20px 15px;
     }
 
-    .action-btn {
-        padding: 18px 25px;
-        font-size: 16px;
+    .content-wrapper {
+        gap: 20px;
     }
-}
 
-@media (min-width: 481px) and (max-width: 768px) {
-    .action-buttons {
-        max-width: 450px;
+    .image-container {
+        padding: 15px;
+    }
+
+    .advantages-box {
+        padding: 20px;
+    }
+
+    .advantages-list li {
+        font-size: 14px;
+        margin-bottom: 12px;
     }
 }
 
 @media (min-width: 769px) {
     .app-container {
-        max-width: 600px;
+        max-width: 1200px;
         margin: 0 auto;
         box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
-    }
-
-    .action-buttons {
-        max-width: 500px;
     }
 }
 
