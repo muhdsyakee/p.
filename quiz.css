@@ -254,50 +254,167 @@ body {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+/* Mobile phones (up to 480px) */
+@media (max-width: 480px) {
+    .top-header {
+        padding: 15px 12px;
+        padding-top: 30px;
+    }
+    
+    .gear-icon {
+        font-size: 20px;
+    }
+    
     .header-banner h1 {
+        font-size: 16px;
+        letter-spacing: 0.5px;
+    }
+    
+    .icon-link {
+        font-size: 20px;
+        width: 35px;
+        height: 35px;
+    }
+    
+    .main-content {
+        padding: 20px 15px;
+        min-height: calc(100vh - 90px);
+    }
+    
+    .quiz-container {
+        max-width: 100%;
+    }
+    
+    .section-header {
+        margin-bottom: 20px;
+        padding-left: 5px;
+    }
+    
+    .section-header h2 {
+        font-size: 16px;
+    }
+
+    .question-card {
+        padding: 15px;
+        margin-bottom: 20px;
+        border-radius: 12px;
+    }
+
+    .question-text {
+        font-size: 14px;
+        margin-bottom: 15px;
+        line-height: 1.4;
+    }
+
+    .options {
+        gap: 10px;
+    }
+
+    .option {
+        font-size: 13px;
+        padding: 10px 12px;
+    }
+    
+    .option input[type="radio"] {
+        width: 18px;
+        height: 18px;
+        margin-right: 10px;
+    }
+
+    .submit-container {
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+
+    .submit-btn {
+        padding: 14px 35px;
+        font-size: 16px;
+        letter-spacing: 1px;
+        border-radius: 10px;
+    }
+}
+
+/* Small tablets and large phones (481px to 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .top-header {
+        padding: 18px 15px;
+        padding-top: 35px;
+    }
+    
+    .header-banner h1 {
+        font-size: 20px;
+    }
+    
+    .main-content {
+        padding: 25px 20px;
+    }
+    
+    .quiz-container {
+        max-width: 100%;
+    }
+    
+    .section-header h2 {
         font-size: 18px;
     }
 
     .question-card {
         padding: 20px;
+        margin-bottom: 22px;
     }
 
     .question-text {
         font-size: 16px;
+        margin-bottom: 18px;
     }
 
     .option {
         font-size: 14px;
-        padding: 10px 12px;
+        padding: 11px 13px;
     }
 
     .submit-btn {
-        padding: 15px 50px;
+        padding: 16px 50px;
         font-size: 18px;
     }
 }
 
-@media (max-width: 480px) {
+/* Tablets and iPad (769px to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .top-header {
+        padding: 20px 20px;
+        padding-top: 40px;
+    }
+    
+    .header-banner h1 {
+        font-size: 22px;
+    }
+    
     .main-content {
-        padding: 20px 15px;
+        padding: 35px 30px;
+    }
+    
+    .quiz-container {
+        max-width: 850px;
+    }
+    
+    .section-header h2 {
+        font-size: 21px;
     }
 
     .question-card {
-        padding: 15px;
+        padding: 25px;
     }
 
     .question-text {
-        font-size: 15px;
+        font-size: 17px;
     }
 
     .option {
-        font-size: 13px;
+        font-size: 15px;
     }
 
     .submit-btn {
-        padding: 12px 40px;
-        font-size: 16px;
-        letter-spacing: 1px;
+        padding: 18px 55px;
+        font-size: 19px;
     }
 }

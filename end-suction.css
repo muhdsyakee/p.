@@ -202,9 +202,16 @@ body {
 }
 
 /* Responsive Design */
+/* Mobile phones (up to 480px) */
 @media (max-width: 480px) {
+    .top-header {
+        padding: 15px 12px;
+        padding-top: 30px;
+    }
+    
     .header-title h1 {
         font-size: 14px;
+        letter-spacing: 0.5px;
     }
 
     .gear-icon {
@@ -228,24 +235,87 @@ body {
         width: 30px;
         height: 30px;
     }
+    
+    .main-content {
+        padding: 30px 15px;
+        padding-bottom: 50px;
+        min-height: calc(100vh - 100px);
+    }
 
     .action-buttons {
         gap: 15px;
+        max-width: 100%;
     }
 
     .action-btn {
-        padding: 18px 25px;
-        font-size: 16px;
+        padding: 16px 20px;
+        font-size: 15px;
+        letter-spacing: 0.5px;
     }
 }
 
+/* Small tablets and large phones (481px to 768px) */
 @media (min-width: 481px) and (max-width: 768px) {
+    .top-header {
+        padding: 18px 15px;
+        padding-top: 35px;
+    }
+    
+    .header-title h1 {
+        font-size: 17px;
+    }
+    
+    .main-content {
+        padding: 35px 20px;
+        padding-bottom: 55px;
+    }
+    
     .action-buttons {
         max-width: 450px;
+        gap: 18px;
+    }
+
+    .action-btn {
+        padding: 19px 28px;
+        font-size: 17px;
     }
 }
 
-@media (min-width: 769px) {
+/* Tablets and iPad (769px to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .app-container {
+        max-width: 700px;
+        margin: 0 auto;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    }
+    
+    .top-header {
+        padding: 20px 20px;
+        padding-top: 40px;
+    }
+    
+    .header-title h1 {
+        font-size: 19px;
+    }
+    
+    .main-content {
+        padding: 40px 25px;
+        padding-bottom: 60px;
+    }
+
+    .action-buttons {
+        max-width: 550px;
+        gap: 22px;
+    }
+    
+    .action-btn {
+        padding: 22px 32px;
+        font-size: 18px;
+    }
+}
+
+/* Desktop (1025px and above) */
+@media (min-width: 1025px) {
     .app-container {
         max-width: 600px;
         margin: 0 auto;

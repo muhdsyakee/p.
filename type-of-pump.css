@@ -245,14 +245,22 @@ body {
 }
 
 /* Responsive Design */
+/* Mobile phones (up to 480px) */
 @media (max-width: 480px) {
+    .top-header {
+        padding: 15px 12px;
+        padding-top: 30px;
+    }
+    
     .header-banner {
         max-width: 200px;
         padding: 10px 20px;
+        border-radius: 25px;
     }
 
     .header-banner h1 {
         font-size: 14px;
+        letter-spacing: 0.5px;
     }
 
     .gear-icon {
@@ -276,9 +284,14 @@ body {
         width: 30px;
         height: 30px;
     }
+    
+    .main-content {
+        padding: 20px 15px;
+    }
 
     .pump-cards-grid {
         gap: 15px;
+        grid-template-columns: 1fr;
     }
 
     .card-image {
@@ -290,18 +303,86 @@ body {
         max-height: 130px;
     }
 
+    .card-banner {
+        padding: 10px 15px;
+    }
+    
     .card-banner span {
         font-size: 12px;
+        letter-spacing: 0.5px;
     }
 }
 
+/* Small tablets and large phones (481px to 768px) */
 @media (min-width: 481px) and (max-width: 768px) {
+    .top-header {
+        padding: 18px 15px;
+        padding-top: 35px;
+    }
+    
+    .header-banner {
+        padding: 12px 25px;
+    }
+    
+    .header-banner h1 {
+        font-size: 18px;
+    }
+    
+    .main-content {
+        padding: 25px 20px;
+    }
+    
     .pump-cards-grid {
         max-width: 500px;
+        gap: 20px;
+    }
+    
+    .card-image {
+        min-height: 180px;
+    }
+    
+    .pump-image {
+        max-height: 160px;
     }
 }
 
-@media (min-width: 769px) {
+/* Tablets and iPad (769px to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .app-container {
+        max-width: 900px;
+        margin: 0 auto;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    }
+    
+    .top-header {
+        padding: 20px 20px;
+        padding-top: 40px;
+    }
+    
+    .header-banner h1 {
+        font-size: 20px;
+    }
+    
+    .main-content {
+        padding: 30px 25px;
+    }
+
+    .pump-cards-grid {
+        max-width: 750px;
+        gap: 25px;
+    }
+    
+    .card-image {
+        min-height: 200px;
+    }
+    
+    .pump-image {
+        max-height: 180px;
+    }
+}
+
+/* Desktop (1025px and above) */
+@media (min-width: 1025px) {
     .app-container {
         max-width: 800px;
         margin: 0 auto;

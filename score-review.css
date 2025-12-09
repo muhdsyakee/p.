@@ -311,7 +311,115 @@ body {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+/* Mobile phones (up to 480px) */
+@media (max-width: 480px) {
+    .top-header {
+        padding: 15px 12px;
+        padding-top: 30px;
+    }
+    
+    .icon-link {
+        font-size: 20px;
+        width: 35px;
+        height: 35px;
+    }
+    
+    .main-content {
+        padding: 25px 15px;
+        min-height: calc(100vh - 90px);
+    }
+    
+    .score-container {
+        max-width: 100%;
+    }
+    
+    .score-box {
+        padding: 25px 20px;
+        border-radius: 15px;
+        margin-bottom: 25px;
+    }
+
+    .score-rating {
+        font-size: 22px;
+        letter-spacing: 2px;
+        margin-bottom: 8px;
+    }
+
+    .score-marks {
+        font-size: 20px;
+        letter-spacing: 1px;
+    }
+
+    .feedback-section {
+        margin-bottom: 25px;
+    }
+
+    .thumbs-up-icon {
+        font-size: 50px;
+        margin-bottom: 8px;
+    }
+
+    .good-text {
+        font-size: 26px;
+        letter-spacing: 1px;
+    }
+
+    .stars-container {
+        gap: 10px;
+        margin-bottom: 30px;
+    }
+
+    .star {
+        font-size: 24px;
+    }
+
+    .results-details {
+        padding: 20px 15px;
+        border-radius: 12px;
+    }
+
+    .results-details h3 {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+    
+    .results-list {
+        gap: 12px;
+    }
+
+    .result-item {
+        padding: 12px;
+    }
+
+    .result-question {
+        font-size: 14px;
+    }
+
+    .result-status {
+        font-size: 12px;
+        padding: 3px 10px;
+    }
+
+    .result-answer {
+        font-size: 13px;
+    }
+}
+
+/* Small tablets and large phones (481px to 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .top-header {
+        padding: 18px 15px;
+        padding-top: 35px;
+    }
+    
+    .main-content {
+        padding: 30px 20px;
+    }
+    
+    .score-container {
+        max-width: 550px;
+    }
+    
     .score-box {
         padding: 30px 40px;
     }
@@ -337,37 +445,58 @@ body {
     }
 
     .results-details {
-        padding: 20px;
+        padding: 25px;
+    }
+    
+    .results-details h3 {
+        font-size: 22px;
     }
 }
 
-@media (max-width: 480px) {
+/* Tablets and iPad (769px to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .top-header {
+        padding: 20px 20px;
+        padding-top: 40px;
+    }
+    
+    .main-content {
+        padding: 40px 30px;
+    }
+    
+    .score-container {
+        max-width: 650px;
+    }
+    
     .score-box {
-        padding: 25px 30px;
+        padding: 35px 50px;
     }
 
     .score-rating {
-        font-size: 24px;
-        letter-spacing: 2px;
+        font-size: 32px;
     }
 
     .score-marks {
-        font-size: 22px;
+        font-size: 30px;
     }
 
     .thumbs-up-icon {
-        font-size: 50px;
+        font-size: 70px;
     }
 
     .good-text {
-        font-size: 28px;
+        font-size: 38px;
     }
 
     .star {
-        font-size: 25px;
+        font-size: 35px;
     }
 
+    .results-details {
+        padding: 30px;
+    }
+    
     .results-details h3 {
-        font-size: 20px;
+        font-size: 23px;
     }
 }

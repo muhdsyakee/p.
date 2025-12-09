@@ -258,17 +258,39 @@ body {
 }
 
 /* Responsive adjustments */
+/* Mobile phones (up to 480px) */
 @media (max-width: 480px) {
+    .top-section {
+        padding: 15px;
+        padding-top: 30px;
+    }
+    
+    .header-banner {
+        padding: 12px 20px;
+        border-radius: 12px;
+    }
+    
     .header-banner h1 {
-        font-size: 20px;
+        font-size: 18px;
+        letter-spacing: 0.5px;
     }
     
     .user-name {
-        font-size: 18px;
+        font-size: 16px;
+        margin-bottom: 6px;
     }
     
     .points-value {
-        font-size: 20px;
+        font-size: 18px;
+    }
+    
+    .points-label {
+        font-size: 12px;
+    }
+    
+    .main-content {
+        padding: 20px 15px;
+        padding-bottom: 100px;
     }
     
     .cards-grid {
@@ -276,21 +298,97 @@ body {
         max-width: 100%;
     }
     
+    .action-card {
+        padding: 20px;
+        border-radius: 15px;
+    }
+    
     .card-icon {
-        width: 60px;
-        height: 60px;
+        width: 55px;
+        height: 55px;
+        margin-bottom: 10px;
     }
     
     .card-icon i {
-        font-size: 36px;
+        font-size: 32px;
     }
     
     .card-label {
-        font-size: 14px;
+        font-size: 13px;
+        letter-spacing: 0.3px;
+    }
+    
+    .bottom-nav {
+        padding: 10px 8px 15px 8px;
+        border-radius: 15px 15px 0 0;
+    }
+    
+    .nav-item {
+        padding: 6px 8px;
+        max-width: 70px;
     }
     
     .nav-item i {
-        font-size: 20px;
+        font-size: 18px;
+    }
+    
+    .nav-item span {
+        font-size: 9px;
+    }
+}
+
+/* Small tablets and large phones (481px to 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .top-section {
+        padding: 18px;
+        padding-top: 35px;
+    }
+    
+    .header-banner {
+        padding: 14px 25px;
+    }
+    
+    .header-banner h1 {
+        font-size: 22px;
+    }
+    
+    .user-name {
+        font-size: 19px;
+    }
+    
+    .points-value {
+        font-size: 22px;
+    }
+    
+    .main-content {
+        padding: 25px 20px;
+        padding-bottom: 100px;
+    }
+    
+    .cards-grid {
+        max-width: 500px;
+        gap: 18px;
+    }
+    
+    .action-card {
+        padding: 25px;
+    }
+    
+    .card-icon {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .card-icon i {
+        font-size: 42px;
+    }
+    
+    .card-label {
+        font-size: 15px;
+    }
+    
+    .nav-item i {
+        font-size: 21px;
     }
     
     .nav-item span {
@@ -298,13 +396,65 @@ body {
     }
 }
 
-@media (min-width: 481px) and (max-width: 768px) {
+/* Tablets and iPad (769px to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .app-container {
+        max-width: 700px;
+        margin: 0 auto;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    }
+    
+    .top-section {
+        padding: 25px;
+        padding-top: 40px;
+    }
+    
+    .header-banner {
+        padding: 15px 30px;
+    }
+    
+    .header-banner h1 {
+        font-size: 26px;
+    }
+    
+    .user-name {
+        font-size: 22px;
+    }
+    
+    .points-value {
+        font-size: 26px;
+    }
+    
+    .main-content {
+        padding: 35px 25px;
+        padding-bottom: 100px;
+    }
+    
     .cards-grid {
-        max-width: 500px;
+        max-width: 550px;
+        gap: 25px;
+    }
+    
+    .action-card {
+        padding: 30px;
+    }
+    
+    .card-icon {
+        width: 85px;
+        height: 85px;
+    }
+    
+    .card-icon i {
+        font-size: 50px;
+    }
+    
+    .card-label {
+        font-size: 17px;
     }
 }
 
-@media (min-width: 769px) {
+/* Desktop (1025px and above) */
+@media (min-width: 1025px) {
     .app-container {
         max-width: 600px;
         margin: 0 auto;
