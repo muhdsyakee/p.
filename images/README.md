@@ -15,3 +15,4 @@ Place your pump images in this folder with the following names:
 
 The images will be automatically scaled to fit the cards while maintaining their aspect ratio.
 
+
