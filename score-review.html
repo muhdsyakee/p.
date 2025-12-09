@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Score Review - PUMPMASTER 360</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="score-review.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Top Header -->
+        <div class="top-header">
+            <!-- Top Right: Back and Home Icons -->
+            <div class="header-icons">
+                <a href="quiz.html" class="icon-link">
+                    <i class="fas fa-arrow-left"></i>
+                </a>
+                <a href="index.html" class="icon-link">
+                    <i class="fas fa-home"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Main Content - Score Display -->
+        <div class="main-content">
+            <div class="score-container">
+                <!-- Score Box -->
+                <div class="score-box" id="scoreBox">
+                    <div class="score-rating" id="scoreRating">EXCELLENT</div>
+                    <div class="score-marks" id="scoreMarks">0/0 MARKS</div>
+                </div>
+
+                <!-- Thumbs Up and Good Text -->
+                <div class="feedback-section">
+                    <div class="thumbs-up-icon" id="thumbsUp">
+                        <i class="fas fa-thumbs-up"></i>
+                    </div>
+                    <div class="good-text" id="goodText">GOOD!</div>
+                </div>
+
+                <!-- Stars -->
+                <div class="stars-container" id="starsContainer">
+                    <i class="fas fa-star star"></i>
+                    <i class="fas fa-star star"></i>
+                    <i class="fas fa-star star"></i>
+                    <i class="fas fa-star star"></i>
+                    <i class="fas fa-star star"></i>
+                </div>
+
+                <!-- Detailed Results -->
+                <div class="results-details" id="resultsDetails">
+                    <h3>Your Answers Review</h3>
+                    <div class="results-list" id="resultsList">
+                        <!-- Results will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="score-review.js"></script>
+</body>
+</html>

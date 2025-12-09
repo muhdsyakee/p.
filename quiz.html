@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUIZ - PUMPMASTER 360</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Top Header -->
+        <div class="top-header">
+            <!-- Top Left: Three Gear Icons -->
+            <div class="gear-icons">
+                <i class="fas fa-cog gear-icon gear-1"></i>
+                <i class="fas fa-cog gear-icon gear-2"></i>
+                <i class="fas fa-cog gear-icon gear-3"></i>
+            </div>
+
+            <!-- Top Center: Banner -->
+            <div class="header-banner">
+                <h1>SIMULATIONS - PUMPMASTER 360</h1>
+            </div>
+
+            <!-- Top Right: Back and Home Icons -->
+            <div class="header-icons">
+                <a href="index.html" class="icon-link">
+                    <i class="fas fa-arrow-left"></i>
+                </a>
+                <a href="index.html" class="icon-link">
+                    <i class="fas fa-home"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Main Content - Quiz Questions -->
+        <div class="main-content">
+            <div class="quiz-container">
+                <div class="section-header">
+                    <h2>Section A: Multiple Choice Questions</h2>
+                </div>
+
+                <form id="quizForm">
+                    <!-- Question 1 -->
+                    <div class="question-card">
+                        <div class="question-text">
+                            <strong>1. What is the most common application of an end suction centrifugal pump?</strong>
+                        </div>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q1" value="a">
+                                <span>a) Pumping sludge</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q1" value="b">
+                                <span>b) Fuel injection</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q1" value="c">
+                                <span>c) Water supply and circulation</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q1" value="d">
+                                <span>d) Hydraulic press operation</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Question 2 -->
+                    <div class="question-card">
+                        <div class="question-text">
+                            <strong>2. In an end suction pump, the suction pipe is connected to the:</strong>
+                        </div>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q2" value="a">
+                                <span>a) Top of the casing</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q2" value="b">
+                                <span>b) Side of the impeller</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q2" value="c">
+                                <span>c) Center (eye) of the impeller</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q2" value="d">
+                                <span>d) Discharge outlet</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Question 3 -->
+                    <div class="question-card">
+                        <div class="question-text">
+                            <strong>3. Which of the following is a typical advantage of an end suction centrifugal pump?</strong>
+                        </div>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q3" value="a">
+                                <span>a) Complex installation</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q3" value="b">
+                                <span>b) High maintenance cost</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q3" value="c">
+                                <span>c) Compact and simple design</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q3" value="d">
+                                <span>d) Only works at low flow rates</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="submit-container">
+                        <button type="submit" class="submit-btn" id="submitBtn">SUBMIT</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="quiz.js"></script>
+</body>
+</html>
